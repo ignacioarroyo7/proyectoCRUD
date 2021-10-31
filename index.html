@@ -20,7 +20,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-celeste">
             <div class="container-fluid font-nav">
               <a class="navbar-brand" href="index.html">
                   <img class="logo-nav" src="images/logoRA-LumberCo.png" alt="logo RA Lumber Company">
@@ -74,6 +74,54 @@
           </nav>
     </header>
     <main></main>
+    
+    <!-- Modal login -->
+<div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-celeste">
+          <h5 class="modal-title text-muted" id="exampleModalLabel">Iniciar sesión</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row mb-3">
+                <label for="inputMail" class="col-sm-3 col-form-label text-center text-muted lead">Email</label>
+                <div class="col-sm-9">
+                  <input type="email" class="form-control" id="inputMail">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="inputPass" class="col-sm-3 col-form-label text-center text-muted lead">Contraseña </label>
+                <div class="col-sm-9">
+                  <input type="password" class="form-control" id="inputPass">
+                  <a class="text-muted" href="#">Olvidé mi contraseña</a>
+                </div>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn bg-celeste my-2 text-muted">Ingresar <i class="fas fa-sign-in-alt text-muted"></i></button>
+              </div>
+            </form>
+              <hr>
+              <div>
+                  <p class="lead text-muted text-center">Accedé con tus redes sociales:</p>
+                  <div class="row justify-content-around">
+                    <button class="btn btn-outline-primary col-sm-5 lead"><i class="fab fa-facebook fa-2x"></i>acebook</button>
+                    <button class="btn btn-outline-primary col-sm-5 lead"> <i class="fab fa-google fa-2x"></i>oogle</button>
+                  </div>
+              </div>
+              <hr>
+              <div class="text-center">
+                  <p class="lead text-muted">¿No tenés cuenta? Registrate!</p>
+                  <a href="#">
+                    <button class="btn bg-celeste text-muted">Crear cuenta</button>
+                    </a>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
     <footer></footer>
     <script src="js/bootstrap.min.js"></script>
 </body>
