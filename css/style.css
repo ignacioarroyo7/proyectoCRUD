@@ -2,9 +2,14 @@
 .bg-celeste{
     background-color: #e3f2fd;
 }
+main{
+    margin-top: 114px;
+}
 
 /*------NAVBAR------*/
-
+.bg-nav-celeste{
+    background-color: rgba(227,242,253,0.9);
+}
 .logo-nav{
     width: 120px;
 }
