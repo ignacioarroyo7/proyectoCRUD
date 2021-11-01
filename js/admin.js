@@ -48,7 +48,6 @@ function guardarProducto(e){
             
         }else{
             actualizarProducto();
-            existeProducto = true;
             limpiarFormulario();
             actualizarContador();
         }
@@ -93,7 +92,7 @@ function crearFilas(producto){
     <td>${producto.descripcion}</td>
     <td>${producto.url}</td>
     <td>
-      <button class="btn btn-warning" onclick='prepararEdicion(${producto.codigo})'><i class="fas fa-edit"></i></button>
+      <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalFormularioProducto" onclick='obtenerDatosEdicion(${producto.codigo})'><i class="fas fa-edit"></i></button>
       <button class="btn btn-danger" onclick='eliminarProducto(${producto.codigo})'><i class="fas fa-trash-alt light"></i></button>
     </td>
   </tr>`
@@ -111,3 +110,4 @@ function actualizarContador(){
     listaProductos = JSON.parse(localStorage.getItem("productos")) || [];
     totalProductos.innerHTML=`Total productos: ${listaProductos.length}`;
 }
+
