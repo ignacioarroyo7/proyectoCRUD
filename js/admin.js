@@ -111,3 +111,14 @@ function actualizarContador(){
     totalProductos.innerHTML=`Total productos: ${listaProductos.length}`;
 }
 
+window.obtenerDatosEdicion = (codigoProducto) =>{
+    let productoBuscado = listaProductos.find((producto)=>{
+        return producto.codigo==codigoProducto;
+    });
+    codigo.value=productoBuscado.codigo;
+    nombre.value=productoBuscado.nombre;
+    descripcion.value=productoBuscado.descripcion;
+    url.value=productoBuscado.url;
+  
+    existeProducto=true;
+  }
