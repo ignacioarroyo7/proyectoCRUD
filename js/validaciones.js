@@ -1,31 +1,3 @@
-let codigo = document.querySelector('#codigo');
-let nombre = document.querySelector('#nombre');
-let descripcion = document.querySelector('#descripcion');
-let url = document.querySelector('#url');
-let formularioProducto = document.querySelector('#formularioProducto');
-
-
-
-codigo.addEventListener('blur',()=>{
-    validarCodigo(codigo);
-});
-
-nombre.addEventListener('blur', ()=>{
-    validarCampoRequerido(nombre);
-});
-
-descripcion.addEventListener('blur',()=>{
-    validarCampoRequerido(descripcion);
-});
-
-url.addEventListener('blur',()=>{
-    validarUrl(url);
-});
-
-formularioProducto.addEventListener('submit',validarGuardar);
-
-
-
 export function validarCodigo(input){
     if(input.value.trim().length !='' && input.value.trim().length >= 4){
         input.className = 'form-control is-valid';
@@ -58,8 +30,7 @@ export function validarUrl(input){
     }
 }
 
-export function validarGuardar(e){
-    e.preventDefault();
+export function validarGuardar(){
     let alerta = document.querySelector('#alertaGuardar');
     
     if(validarCodigo(codigo)&&validarCampoRequerido(nombre)&&validarCampoRequerido(descripcion)&&validarUrl(url)){
