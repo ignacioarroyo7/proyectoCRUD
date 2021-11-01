@@ -20,7 +20,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-nav-celeste fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-nav-celeste">
             <div class="container-fluid font-nav ms-5">
               <a class="navbar-brand ms-5" href="../index.html">
                   <img class="logo-nav" src="../images/logoRA-LumberCo.png" alt="logo RA Lumber Company">
@@ -77,9 +77,10 @@
             </div>
           </nav>
     </header>
-    <main class="container">
+    <main class="container main-admin">
         <h1 class="display-1 text-center my-3 text-muted">Administrador de productos</h1>
-        <hr class="my2">
+        <hr class="mt-4">
+        <!--
         <article>
             <form id="formularioProducto">
                 <div class="mb-3">
@@ -107,8 +108,9 @@
                     Debe completar todos los datos marcados
                   </div>
             </form>
-        </article>
-        <button class="btn bg-celeste text-muted lead" id="btnNuevoProducto"><i class="fas fa-plus-square"></i> Nuevo producto</button>
+        </article>-->
+        <button class="btn bg-celeste text-muted lead" id="btnNuevoProducto" data-bs-toggle="modal" data-bs-target="#modalFormularioProducto"><i class="fas fa-plus-square"></i> Nuevo producto</button>
+        <span id="totalProductos" class="alert bg-celeste text-muted"></span>
         <hr class="mb-2">
         <section>
             <article class="table-responsive">
@@ -176,6 +178,47 @@
       </div>
     </div>
     </div>
+    <!-- Modal formulario carga -->
+<div class="modal fade" id="modalFormularioProducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-celeste">
+          <h5 class="modal-title text-muted" id="exampleModalLabel">Producto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <article>
+                <form id="formularioProducto">
+                    <div class="mb-3">
+                        <label for="" class="form-label lead text-muted">Código</label>
+                        <input type="text" id="codigo" class="form-control" placeholder="Codigo alfanumerico del producto">
+                        <div class="invalid-feedback">Este campo es obligatorio</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label lead text-muted">Nombre</label>
+                        <input type="text" id="nombre" class="form-control" placeholder="Nombre del producto">
+                        <div class="invalid-feedback">Este campo es obligatorio</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label lead text-muted">Descripción</label>
+                        <input type="text" id="descripcion" class="form-control" placeholder="Descripción del producto">
+                        <div class="invalid-feedback">Este campo es obligatorio</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label lead text-muted">URL</label>
+                        <input type="text" id="url" class="form-control" placeholder="https://...">
+                        <div class="invalid-feedback">Este campo es obligatorio</div>
+                    </div>
+                    <button type="submit" class="btn bg-celeste text-muted lead my-2" id="btn-guardarProducto">Guardar</button>
+                    <div class="alert alert-danger mt-4 d-none" role="alert" id="alertaGuardar">
+                        Debe completar todos los datos marcados
+                      </div>
+                </form>
+            </article>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <footer class="bg-celeste container-fluid mt-2">
         <div class="container">

@@ -11,9 +11,10 @@ let formularioProducto = document.querySelector('#formularioProducto');
 let existeProducto = false;
 let listaProductos = [];
 let btnNuevoProducto = document.querySelector('#btnNuevoProducto');
+let totalProductos = document.querySelector('#totalProductos');
 
 cargaInicial();
-
+actualizarContador();
 
 codigo.addEventListener('blur',()=>{
     validarCodigo(codigo);
@@ -32,7 +33,7 @@ url.addEventListener('blur',()=>{
 });
 
 formularioProducto.addEventListener('submit',guardarProducto);
-btnNuevoProducto.addEventListener('click',abrirFormulario);
+btnNuevoProducto.addEventListener('click',limpiarFormulario);
 
 
 
@@ -42,9 +43,14 @@ function guardarProducto(e){
         if(existeProducto == false){
             agregarProducto();
             existeProducto = true;
+            limpiarFormulario();
+            actualizarContador();
+            
         }else{
             actualizarProducto();
             existeProducto = true;
+            limpiarFormulario();
+            actualizarContador();
         }
     }
 }
@@ -59,6 +65,14 @@ function agregarProducto(){
     limpiarFormulario();
 
     crearFilas(nuevoProducto);
+
+    Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Producto agregado correctamente",
+        showConfirmButton: false,
+        timer: 1500,
+      });
 }
 
 function limpiarFormulario(){
@@ -87,12 +101,13 @@ function crearFilas(producto){
 
 function cargaInicial(){
     listaProductos = JSON.parse(localStorage.getItem("productos")) || [];
-
     listaProductos.forEach(producto => {
         crearFilas(producto);
     });
+    
 }
 
-function abrirFormulario(){
-    
+function actualizarContador(){
+    listaProductos = JSON.parse(localStorage.getItem("productos")) || [];
+    totalProductos.innerHTML=`Total productos: ${listaProductos.length}`;
 }
