@@ -40,7 +40,7 @@ btnNuevoProducto.addEventListener('click',limpiarFormulario);
 function guardarProducto(e){
     e.preventDefault();
     if(validarGuardar()){
-        if(existeProducto == false){
+        if(existeProducto === false){
             agregarProducto();
             existeProducto = true;
             limpiarFormulario();
@@ -93,7 +93,7 @@ function crearFilas(producto){
     <td>${producto.url}</td>
     <td>
       <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalFormularioProducto" onclick='obtenerDatosEdicion(${producto.codigo})'><i class="fas fa-edit"></i></button>
-      <button class="btn btn-danger" onclick='eliminarProducto(${producto.codigo})'><i class="fas fa-trash-alt light"></i></button>
+      <button class="btn btn-danger" onclick='borrarProducto(${producto.codigo})'><i class="fas fa-trash-alt light"></i></button>
     </td>
   </tr>`
 }
@@ -122,3 +122,37 @@ window.obtenerDatosEdicion = (codigoProducto) =>{
   
     existeProducto=true;
   }
+
+function actualizarProducto(){
+    let posicionProducto = listaProductos.findIndex((producto)=>{
+        return producto.codigo==codigo.value;
+    });
+
+    listaProductos[posicionProducto].nombre=nombre.value;
+    listaProductos[posicionProducto].descripcion=descripcion.value;
+    listaProductos[posicionProducto].url=url.value;
+
+    localStorage.setItem("productos",JSON.stringify(listaProductos));
+
+    limpiarTabla();
+
+    listaProductos.forEach((producto)=>{
+        crearFilas(producto);
+    });
+
+    limpiarFormulario();
+
+    Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Producto editado correctamente",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+}
+
+function limpiarTabla(){
+    let tabla = document.querySelector('#tablaProductos');
+    tabla.innerHTML='';
+}
+
