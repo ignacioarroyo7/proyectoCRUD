@@ -156,3 +156,38 @@ function limpiarTabla(){
     tabla.innerHTML='';
 }
 
+window.borrarProducto = (codigoProducto)=>{
+    Swal.fire({
+        title: 'Seguro quieres eliminar este producto?',
+        text: "Recuerda que una vez eliminado el producto podrá ser recuperado",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, borrar producto!',
+        cancelButtonText:'No, cancelar'
+      }).then((result) => {
+        if (result.isConfirmed) {
+            let productosFiltrados = listaProductos.filter((producto)=>{
+                return producto.codigo!=codigoProducto;
+            });
+
+            listaProductos=productosFiltrados;
+
+            localStorage.setItem("productos",JSON.stringify(listaProductos));
+
+            limpiarTabla();
+
+            listaProductos.forEach((producto)=>{
+                crearFilas(producto);
+            });
+            actualizarContador();
+
+          Swal.fire(
+            'Eliminado!',
+            'El producto ha sido eliminado',
+            'success'
+          )
+        }
+      });
+}
