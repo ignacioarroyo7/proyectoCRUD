@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página web oficial de RA Lumber Company">
+    <meta name="keywords" content="RA,RA Lumber Company, Maderera RA,,Maderera Tucuman, Madera Tucuman, Melamina, Melamina Tucuman, Placas melamina">
+    <meta name="author" content="Arroyo Ignacio">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/012f3cd5dc.js" crossorigin="anonymous"></script>
+    <title>Error 404 | RA Lumber Co.</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-nav-celeste">
+            <div class="container-fluid font-nav ms-xl-5">
+              <a class="navbar-brand ms-xl-5" href="../index.html">
+                  <img class="logo-nav" src="../images/logoRA-LumberCo.png" alt="logo RA Lumber Company">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse container" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase"  href="../index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-uppercase mx-xl-3" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Productos
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <li><a class="dropdown-item" href="#">Placas Melamina</a></li>
+                      <li><a class="dropdown-item" href="#">Revestimientos</a></li>
+                      <li><a class="dropdown-item" href="#">Fondos</a></li>
+                      <li><a class="dropdown-item" href="#">Tapacanto</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase mx-xl-3" href="#">Novedades</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase mx-xl-3" href="#">Galería</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase mx-xl-3" href="#">¿Quienes somos?</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link  text-uppercase mx-xl-3" href="#">Contacto</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase mx-xl-3" href="admin.html"
+                    >Admin</a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav ms-lg-auto mb-2">
+                    <li class="nav-item">
+                      <a
+                        class="btn mt-2 nav-link"
+                        type="button"
+                        href="#"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modalLogin"
+                      >
+                        Ingresar <i class="far fa-user fa-1x"></i></a
+                      >
+                    </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main class="my-5">
+        <section class="container-fluid text-center">
+            <article>
+                <img class="img-fluid my-4" src="../images/Error_404_VectroForFree.png" alt="">
+            </article>
+            <article class="my-4">
+                <h3 class="display-5 mb-5 alert bg-celeste">Oops! La página que intentas solicitar no está en el servidor (Error 404)</h3>
+                <a class="my-5" href="../index.html"><button class="btn btn-lg bg-celeste text-muted">Volver a Inicio</button></a>
+            </article>
+        </section>
+    </main>
+    <!-- Modal login -->
+    <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header bg-celeste">
+              <h5 class="modal-title text-muted" id="exampleModalLabel">Iniciar sesión</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="row mb-3">
+                    <label for="inputMail" class="col-sm-3 col-form-label text-center text-muted lead">Email</label>
+                    <div class="col-sm-9">
+                      <input type="email" class="form-control" id="inputMail">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <label for="inputPass" class="col-sm-3 col-form-label text-center text-muted lead">Contraseña </label>
+                    <div class="col-sm-9">
+                      <input type="password" class="form-control" id="inputPass">
+                      <a class="text-muted" href="#">Olvidé mi contraseña</a>
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <button type="submit" class="btn bg-celeste my-2 text-muted">Ingresar <i class="fas fa-sign-in-alt text-muted"></i></button>
+                  </div>
+                </form>
+                  <hr>
+                  <div>
+                      <p class="lead text-muted text-center">Accedé con tus redes sociales:</p>
+                      <div class="row justify-content-around">
+                        <button class="btn btn-outline-primary col-sm-5 lead"><i class="fab fa-facebook fa-2x"></i>acebook</button>
+                        <button class="btn btn-outline-primary col-sm-5 lead"> <i class="fab fa-google fa-2x"></i>oogle</button>
+                      </div>
+                  </div>
+                  <hr>
+                  <div class="text-center">
+                      <p class="lead text-muted">¿No tenés cuenta? Registrate!</p>
+                      <a href="#">
+                        <button class="btn bg-celeste text-muted">Crear cuenta</button>
+                        </a>
+                  </div>
+            </div>
+          </div>
+        </div>
+        </div>
+    <footer class="bg-celeste container-fluid mt-2">
+        <div class="container">
+        <div class="row justify-content-around">
+            <div class="col-sm-12 col-lg-3 mb-3 mt-3">
+                <h3 class="text-muted lg-text-center">¿Quienes somos?</h3>
+                <p class="lead lg-text-center text-muted">Comercializamos las principales marcas de productos para el carpintero en melamina. Servicios de cortes a medida, placas, tapacanto, fondos y herrajes.</p>
+            </div>
+            <hr class="d-block d-lg-none">
+            <div class="col-sm-12 col-lg-3 mb-3 mt-3">
+                <h3 class="text-muted lg-text-center">Navegación</h3>
+                <nav class="navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item lg-ms-5">
+                        <a href="../index.html" class="nav-link text-muted ">Inicio</a>
+                    </li>
+                    <li class="nav-item lg-ms-5">
+                        <a href="#" class="nav-link text-muted">Productos</a>
+                    </li>
+                    <li class="nav-item lg-ms-5">
+                        <a href="#" class="nav-link text-muted">Novedades</a>
+                    </li>
+                    <li class="nav-item lg-ms-5">
+                        <a href="#" class="nav-link text-muted">Galeria</a>
+                    </li>  
+                    <li class="nav-item lg-ms-5">
+                        <a href="#" class="nav-link text-muted">Quienes somos?</a>
+                    </li> 
+                </ul>
+            </nav>
+            </div>
+            <hr class="d-block d-lg-none">
+            <div class="col-sm-12 col-lg-3 mb-3 mt-3">
+                <h3 class="text-muted lg-text-center">Contacto</h3>
+                <nav class=" navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item lg-ms-3 mb-3">
+                            <p class="lead text-muted"><i class="fas fa-phone"></i> +54 3865 417701</p>
+                        </li>
+                        <li class="nav-item lg-ms-3 mb-3">
+                            <p class="lead text-muted"><i class="far fa-envelope"></i> info@ra-lumber-co.com</p>
+                        </li>
+                        <li class="nav-item lg-ms-3 mb-3">
+                            <a class="nav-link text-muted" href="https://g.page/RollingCodeSchool?share"><i class="fas fa-map-marked-alt"></i> Gral. Paz 576 - San Miguel de Tucumán</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <hr class="d-block d-lg-none">
+            <div class="col-sm-12 col-lg-3 mb-3 mt-3">
+                <h3 class="lg-text-center text-muted">Redes sociales:</h3>
+                <nav class="navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item lg-ms-5 mb-2">
+                            <a href="../index.html" class="nav-link text-muted lead"><i class="fab fa-instagram fa-2x"></i> Instagram</a>
+                        </li>
+                        <li class="nav-item lg-ms-5 mb-2">
+                            <a href="#" class="nav-link text-muted lead"><i class="fab fa-facebook-square fa-2x"></i> Facebook</a>
+                        </li>
+                        <li class="nav-item lg-ms-5">
+                            <a href="#" class="nav-link text-muted lead"><i class="fas fa-globe-americas fa-2x"></i> RA Lumber Co.</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        </div>
+        <hr>
+        <div class="row text-center">
+            <p class="text-muted">&copy Todos los derechos reservados | RA Lumber Company </p>
+        </div>
+    </footer>
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>
