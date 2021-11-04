@@ -1,3 +1,8 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
 /*-------general-------*/
 .bg-celeste{
     background-color: #e3f2fd;
@@ -15,13 +20,126 @@ main{
 }
 .logo-nav{
     width: 120px;
+    border-radius: 50%;
 }
 .font-nav{
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
 }
 /*-------------------*/
-/*-------footer*/
-.logo-footer{
-    width: 250px;
+
+
+/*login-register*/
+.bg-nav-login{
+    background-color: rgba(227,242,253,0.000001);
+}
+.body-login{
+    background-image: url(../images/bg-login2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    box-sizing: border-box;
+}
+.contenedor-principal{
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+}
+
+.caja-trasera{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    height: 400px;
+    background-color: rgba(0,0,0,0.35);
+    border-radius: 10px;
+}
+
+.caja-trasera div{
+    color: white;
+    transition: all 500ms;
+}
+.contenedor-login-register{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    top:-200px;
+    left:10px;
+
+    transition:left 500ms cubic-bezier(0.175,0.885,0.320,1.275) ;
+}
+.contenedor-login-register form{
+    width: 100%;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.form-login{
+    opacity: 1;
+    display: block;
+}
+
+.form-register{
+    display: none;
+}
+
+
+/*-------footer--------*/
+.bg-footer-login{
+    background-color: rgba(227,242,253,0.000001);
+}
+
+
+
+/*--------Responsive--------*/
+
+@media all and (max-width:850px){
+    .font-nav{
+        font-size: 20px;
+    }
+    .main-login{
+        margin-top:50px ;
+    }
+    .caja-trasera{
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin:auto;
+    }
+    .caja-trasera div{
+        margin: 0;
+        position: absolute;
+    }
+    
+    /*formularios*/
+    .contenedor-login-register{
+        top:-10px;
+        left:-5px;
+        margin: auto;
+    }
+    .contenedor-login-register form{
+        position: relative;
+    }
+    .main-login{
+        margin-bottom: 100px;
+    }
+    .bg-nav-login{
+        background-color: rgba(227,242,253,0.2);
+    }
+    .footer-login{
+        position: relative;
+    }
+}
+
+@media all and (min-width:851px){
+    .footer-login{
+        position: fixed;
+        bottom: 0;
+    }
 }

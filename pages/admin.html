@@ -34,27 +34,27 @@
                 <a class="nav-link text-uppercase"  href="../index.html">Inicio</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-uppercase mx-xl-3" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle text-uppercase mx-xl-3" href="error404.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Productos
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">Placas Melamina</a></li>
-                  <li><a class="dropdown-item" href="#">Revestimientos</a></li>
-                  <li><a class="dropdown-item" href="#">Fondos</a></li>
-                  <li><a class="dropdown-item" href="#">Tapacanto</a></li>
+                  <li><a class="dropdown-item" href="error404.html">Placas Melamina</a></li>
+                  <li><a class="dropdown-item" href="error404.html">Revestimientos</a></li>
+                  <li><a class="dropdown-item" href="error404.html">Fondos</a></li>
+                  <li><a class="dropdown-item" href="error404.html">Tapacanto</a></li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-uppercase mx-xl-3" href="#">Novedades</a>
+                <a class="nav-link text-uppercase mx-xl-3" href="error404.html">Novedades</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-uppercase mx-xl-3" href="#">Galería</a>
+                <a class="nav-link text-uppercase mx-xl-3" href="error404.html">Galería</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-uppercase mx-xl-3" href="#">¿Quienes somos?</a>
+                <a class="nav-link text-uppercase mx-xl-3" href="acercaDe.html">¿Quienes somos?</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link  text-uppercase mx-xl-3" href="#">Contacto</a>
+                <a class="nav-link  text-uppercase mx-xl-3" href="error404.html">Contacto</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active text-uppercase mx-xl-3" aria-current="page" href="admin.html"
@@ -66,9 +66,7 @@
                   <a
                     class="btn mt-2 nav-link"
                     type="button"
-                    href="#"
-                    data-bs-toggle="modal"
-                    data-bs-target="#modalLogin"
+                    href="login.html"
                   >
                     Ingresar <i class="far fa-user fa-1x"></i></a
                   >
@@ -81,35 +79,6 @@
     <main class="container main-admin">
         <h1 class="display-1 text-center my-3 text-muted">Administrador de productos</h1>
         <hr class="mt-4">
-        <!--
-        <article>
-            <form id="formularioProducto">
-                <div class="mb-3">
-                    <label for="" class="form-label lead text-muted">Código</label>
-                    <input type="text" id="codigo" class="form-control" placeholder="Codigo alfanumerico del producto">
-                    <div class="invalid-feedback">Este campo es obligatorio</div>
-                </div>
-                <div class="mb-3">
-                    <label for="" class="form-label lead text-muted">Nombre</label>
-                    <input type="text" id="nombre" class="form-control" placeholder="Nombre del producto">
-                    <div class="invalid-feedback">Este campo es obligatorio</div>
-                </div>
-                <div class="mb-3">
-                    <label for="" class="form-label lead text-muted">Descripción</label>
-                    <input type="text" id="descripcion" class="form-control" placeholder="Descripción del producto">
-                    <div class="invalid-feedback">Este campo es obligatorio</div>
-                </div>
-                <div class="mb-3">
-                    <label for="" class="form-label lead text-muted">URL</label>
-                    <input type="text" id="url" class="form-control" placeholder="https://...">
-                    <div class="invalid-feedback">Este campo es obligatorio</div>
-                </div>
-                <button type="submit" class="btn bg-celeste text-muted lead my-2" id="btn-guardarProducto">Guardar</button>
-                <div class="alert alert-danger mt-4 d-none" role="alert" id="alertaGuardar">
-                    Debe completar todos los datos marcados
-                  </div>
-            </form>
-        </article>-->
         <button class="btn bg-celeste text-muted lead" id="btnNuevoProducto" data-bs-toggle="modal" data-bs-target="#modalFormularioProducto"><i class="fas fa-plus-square"></i> Nuevo producto</button>
         <span id="totalProductos" class="alert bg-celeste text-muted"></span>
         <hr class="mb-2">
@@ -133,52 +102,6 @@
         </section>
     </main>
     
-    <!-- Modal login -->
-    <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header bg-celeste">
-          <h5 class="modal-title text-muted" id="exampleModalLabel">Iniciar sesión</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="row mb-3">
-                <label for="inputMail" class="col-sm-3 col-form-label text-center text-muted lead">Email</label>
-                <div class="col-sm-9">
-                  <input type="email" class="form-control" id="inputMail">
-                </div>
-              </div>
-              <div class="row mb-3">
-                <label for="inputPass" class="col-sm-3 col-form-label text-center text-muted lead">Contraseña </label>
-                <div class="col-sm-9">
-                  <input type="password" class="form-control" id="inputPass">
-                  <a class="text-muted" href="#">Olvidé mi contraseña</a>
-                </div>
-              </div>
-              <div class="text-center">
-                <button type="submit" class="btn bg-celeste my-2 text-muted">Ingresar <i class="fas fa-sign-in-alt text-muted"></i></button>
-              </div>
-            </form>
-              <hr>
-              <div>
-                  <p class="lead text-muted text-center">Accedé con tus redes sociales:</p>
-                  <div class="row justify-content-around">
-                    <button class="btn btn-outline-primary col-sm-5 lead"><i class="fab fa-facebook fa-2x"></i>acebook</button>
-                    <button class="btn btn-outline-primary col-sm-5 lead"> <i class="fab fa-google fa-2x"></i>oogle</button>
-                  </div>
-              </div>
-              <hr>
-              <div class="text-center">
-                  <p class="lead text-muted">¿No tenés cuenta? Registrate!</p>
-                  <a href="#">
-                    <button class="btn bg-celeste text-muted">Crear cuenta</button>
-                    </a>
-              </div>
-        </div>
-      </div>
-    </div>
-    </div>
     <!-- Modal formulario carga -->
 <div class="modal fade" id="modalFormularioProducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -221,7 +144,7 @@
     </div>
   </div>
 
-    <footer class="bg-celeste container-fluid mt-2">
+    <footer class="bg-celeste container-fluid mt-2 footer-login">
         <div class="container">
         <div class="row justify-content-around">
             <div class="col-sm-12 col-lg-3 mb-3 mt-3">
