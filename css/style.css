@@ -95,7 +95,63 @@ main{
     background-color: rgba(227,242,253,0.000001);
 }
 
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+/*-------Pagina principal--------*/
 
+.header-index{
+    z-index: 2000;
+    width: 100%;
+    height: 650px;
+    background-attachment: fixed;
+    background-position:center;
+    background-size: cover;
+    /*background-image: url("/images/duplexcopia.jpg");*/
+    background: #009FFF;
+    background: -webkit-linear-gradient(to right, hsla(351, 83%, 55%, 0.1), rgba(0, 157, 255, 0.2)),url("/images/duplexcopia.jpg");
+    background: linear-gradient(to right, rgba(236, 47, 75, 0.1), rgba(0, 157, 255, 0.1)),url("/images/duplexcopia.jpg");
+    clip-path: polygon(0 0, 100% 0, 100% 79%, 100% 87%, 0 100%, 45% 100%, 23% 100%, 0 100%);
+}
+#ir_arriba_boton{
+    position: fixed;
+    z-index: 1000;
+    right: 25px;
+    bottom: 25px;
+    background-color: rgb(25,121,169);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+}
+#ir_arriba_boton:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.indicador_contenedor{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 8px;
+    z-index: 10001;
+}
+.indicador_scroll{
+    height: 100%;
+    width: 0;
+    background-color: rgb(25,121,169);
+}
+.ocultar{
+    opacity: 0;
+    visibility: hidden;
+}
+.mostrar{
+    opacity: 1;
+    visibility: visible;
+}
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
 
 /*--------Responsive--------*/
 
@@ -135,6 +191,11 @@ main{
     .footer-login{
         position: relative;
     }
+    .bg-nav-index{
+        background-color: rgba(0,0,0,0.5);
+    }
+
+    
 }
 
 @media all and (min-width:851px){
